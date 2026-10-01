@@ -1,7 +1,14 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./styles/global.css";
 import App from "./app/App.jsx";
+
+import "@fontsource/dm-sans/400.css";
+import "@fontsource/dm-sans/500.css";
+import "@fontsource/dm-sans/600.css";
+import "@fontsource/dm-sans/700.css";
+import "@fontsource/dm-sans/800.css";
+
+import "./styles/global.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

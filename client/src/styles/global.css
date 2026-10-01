@@ -1,10 +1,8 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
 
 :root {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
 
-  /* Handy colors */
   --color-primary: #ff6a2b;
   --color-dark: #1e2a38;
   --color-background: #ffffff;
@@ -25,7 +23,7 @@ body,
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
   color: var(--color-dark);
   background-color: var(--color-background);
 
