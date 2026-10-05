@@ -58,13 +58,23 @@
 }
 
 .blob-1-decoration {
-  width: 720px;
+  width: 400px;
   top: -10%;
   right: -18%;
 }
 
 .blob-2-decoration {
-  width: 920px;
+  width: 500px;
   top: -2%;
   left: -28%;
+}
+
+@media (min-width: 768px) {
+  .blob-1-decoration {
+    width: 720px;
+  }
+
+  .blob-2-decoration {
+    width: 920px;
+  }
 }
