@@ -2,15 +2,15 @@
 import "./RoleSelect.css";
 import { Link } from "react-router-dom";
 
-import HandyLogo from "../../../assets/logo/handy-logo.png";
-import Customer from "../../../assets/images/customer.png";
-import Provider from "../../../assets/images/provider.png";
-import BottomWave from "../../../assets/icons/wave.svg";
-import BottomWave2 from "../../../assets/icons/wave-2.svg";
-import WrenchBg from "../../../assets/icons/wrench.svg";
-import HouseBg from "../../../assets/icons/home.svg";
-import Blob1 from "../../../assets/icons/blob-1.svg";
-import Blob2 from "../../../assets/icons/blob-2.svg";
+import HandyLogo from "../../../../assets/logo/handy-logo.png";
+import Customer from "../../../../assets/images/customer.png";
+import Provider from "../../../../assets/images/provider.png";
+import BottomWave from "../../../../assets/icons/wave.svg";
+import BottomWave2 from "../../../../assets/icons/wave-2.svg";
+import WrenchBg from "../../../../assets/icons/wrench.svg";
+import HouseBg from "../../../../assets/icons/home.svg";
+import Blob1 from "../../../../assets/icons/blob-1.svg";
+import Blob2 from "../../../../assets/icons/blob-2.svg";
 
 const GoCircle = () => (
   <span className="go-circle absolute right-4 bottom-4 md:right-5 md:bottom-5 w-9 h-9 md:w-11 md:h-11 rounded-full bg-[#ff7a1a] grid place-items-center shadow-[0_4px_12px_rgba(255,122,26,0.35)] transition-transform duration-150 group-hover:scale-110 shrink-0">
