@@ -1,4 +1,4 @@
-// features/auth/pages/RoleSelect.jsx
+// features/auth/pages/RoleSelect/RoleSelect.jsx
 import "./RoleSelect.css";
 import { Link } from "react-router-dom";
 
