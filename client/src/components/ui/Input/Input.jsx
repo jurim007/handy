@@ -1,3 +1,4 @@
+import "./Input.css";
 import Label from "../Label/Label";
 
 function Input({
