@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Input from "../../../../components/ui/Input/Input";
-import Input from "../../../../components/ui/Input/Dropdown";
+import Dropdown from "../../../../components/ui/Input/Dropdown";
 import {
   Phone,
   Lock,
@@ -12,7 +12,6 @@ import {
   ListSortDescending,
   CircleEuro,
 } from "lucide-react";
-import Dropdown from "../../../../components/ui/Input/Dropdown";
 
 const AuthPage = ({ role }) => {
   const [mode, setMode] = useState("login");
