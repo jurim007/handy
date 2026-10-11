@@ -1,3 +1,4 @@
+// components/ui/Label/Label.jsx
 import "./Label.css";
 
 function Label({ children, htmlFor }) {
