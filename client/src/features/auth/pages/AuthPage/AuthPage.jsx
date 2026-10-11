@@ -4,8 +4,11 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Input from "../../../../components/ui/Input/Input";
+import Label from "../../../../components/ui/Label/Label";
 import Dropdown from "../../../../components/ui/Input/Dropdown";
 import WorkdaysPicker from "../../../../components/ui/WorkdaysPicker/WorkdaysPicker";
+
+import { HOURS } from "../../../../constants/hours";
 
 import {
   Phone,
@@ -14,6 +17,7 @@ import {
   MapPin,
   ListSortDescending,
   CircleEuro,
+  Clock,
 } from "lucide-react";
 
 const AuthPage = ({ role }) => {
@@ -24,6 +28,8 @@ const AuthPage = ({ role }) => {
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
   const [workdays, setWorkdays] = useState([]);
+  const [startTime, setStartTime] = useState("");
+  const [endTime, setEndTime] = useState("");
   const [password, setPassword] = useState("");
 
   return (
@@ -71,6 +77,7 @@ const AuthPage = ({ role }) => {
                 onChange={(e) => setCategory(e.target.value)}
                 placeholder="Zgjidh kategorinë"
               />
+
               <Input
                 label="Çmimi për orë"
                 icon={CircleEuro}
@@ -78,11 +85,33 @@ const AuthPage = ({ role }) => {
                 onChange={(e) => setPrice(e.target.value)}
                 placeholder="P.sh. 10 €"
               />
+
               <WorkdaysPicker
                 label="Ditët e punës"
                 value={workdays}
                 onChange={setWorkdays}
               />
+
+              <div>
+                <Label>Orari</Label>
+                <div className="flex items-center gap-2">
+                  <Dropdown
+                    icon={Clock}
+                    options={HOURS}
+                    value={startTime}
+                    onChange={(e) => setStartTime(e.target.value)}
+                    placeholder="07:00"
+                  />
+                  <span>–</span>
+                  <Dropdown
+                    icon={Clock}
+                    options={HOURS}
+                    value={endTime}
+                    onChange={(e) => setEndTime(e.target.value)}
+                    placeholder="17:00"
+                  />
+                </div>
+              </div>
             </>
           )}
         </>
