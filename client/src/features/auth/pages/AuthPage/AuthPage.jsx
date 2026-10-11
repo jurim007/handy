@@ -1,9 +1,12 @@
 import "./AuthPage.css";
+
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import Input from "../../../../components/ui/Input/Input";
 import Dropdown from "../../../../components/ui/Input/Dropdown";
+import WorkdaysPicker from "../../../../components/ui/WorkdaysPicker/WorkdaysPicker";
+
 import {
   Phone,
   Lock,
@@ -16,11 +19,12 @@ import {
 const AuthPage = ({ role }) => {
   const [mode, setMode] = useState("login");
   const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
   const [category, setCategory] = useState("");
   const [price, setPrice] = useState("");
+  const [workdays, setWorkdays] = useState([]);
+  const [password, setPassword] = useState("");
 
   return (
     <div>
@@ -34,14 +38,6 @@ const AuthPage = ({ role }) => {
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         placeholder="P.sh. 069 123 4567"
-      />
-
-      <Input
-        label="Fjalëkalimi"
-        icon={Lock}
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        placeholder="P.sh. Fjalëkalimi123"
       />
 
       {/* Devide into mode and roles */}
@@ -82,10 +78,23 @@ const AuthPage = ({ role }) => {
                 onChange={(e) => setPrice(e.target.value)}
                 placeholder="P.sh. 10 €"
               />
+              <WorkdaysPicker
+                label="Ditët e punës"
+                value={workdays}
+                onChange={setWorkdays}
+              />
             </>
           )}
         </>
       )}
+
+      <Input
+        label="Fjalëkalimi"
+        icon={Lock}
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+        placeholder="P.sh. Fjalëkalimi123"
+      />
     </div>
   );
 };
