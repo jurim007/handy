@@ -9,6 +9,7 @@ function Dropdown({
   value,
   onChange,
   placeholder = "Zgjidh",
+  required,
 }) {
   return (
     <div>
@@ -23,6 +24,7 @@ function Dropdown({
         <select
           value={value}
           onChange={onChange}
+          required={required}
           className={`w-full border border-gray-300 rounded-full px-3 py-2 pl-10 text-sm focus:outline-none focus:border-orange-400 ${
             value === "" ? "text-gray-400" : "text-gray-900"
           }`}

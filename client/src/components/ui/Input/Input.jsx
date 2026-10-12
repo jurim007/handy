@@ -9,11 +9,12 @@ function Input({
   onChange,
   placeholder,
   type = "text",
+  required,
 }) {
   return (
     <div>
       {label && <Label>{label}</Label>}
-      <div className="relative ...">
+      <div className="relative flex items-center">
         {Icon && (
           <Icon
             size={18}
@@ -25,6 +26,7 @@ function Input({
           value={value}
           onChange={onChange}
           placeholder={placeholder}
+          required={required}
           className="w-full border border-gray-300 rounded-full px-3 py-2 pl-10 text-sm focus:outline-none focus:border-orange-400"
         />
       </div>
