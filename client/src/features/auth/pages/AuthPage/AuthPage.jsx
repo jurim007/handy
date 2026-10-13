@@ -19,6 +19,7 @@ import {
   ListSortDescending,
   CircleEuro,
   Clock,
+  UserRound,
 } from "lucide-react";
 
 const AuthPage = ({ role }) => {
@@ -32,6 +33,8 @@ const AuthPage = ({ role }) => {
   const [startTime, setStartTime] = useState("");
   const [endTime, setEndTime] = useState("");
   const [password, setPassword] = useState("");
+
+  const roleName = role === "customer" ? "klient" : "ofrues";
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -47,9 +50,18 @@ const AuthPage = ({ role }) => {
     if (mode === "login") {
       data = { phone, password };
     } else if (role === "customer") {
-      data = {phone, password, name, address}
+      data = { phone, password, name, address };
     } else {
-      data = {phone, password, name, category, price, workdays, startTime, endTime}
+      data = {
+        phone,
+        password,
+        name,
+        category,
+        price,
+        workdays,
+        startTime,
+        endTime,
+      };
     }
 
     // 3. for now, just look at it
@@ -58,23 +70,32 @@ const AuthPage = ({ role }) => {
 
   return (
     <div>
-      <Button
-        type="button"
-        variant={mode === "login" ? "primary" : "outline"}
-        onClick={() => setMode("login")}
-      >
-        Hyr
-      </Button>
-
-      <Button
-        type="button"
-        variant={mode === "register" ? "primary" : "outline"}
-        onClick={() => setMode("register")}
-      >
-        Regjistrohu
-      </Button>
-
       <form onSubmit={handleSubmit}>
+        <Button
+          type="button"
+          variant={mode === "login" ? "primary" : "outline"}
+          onClick={() => setMode("login")}
+        >
+          Hyr
+        </Button>
+
+        <Button
+          type="button"
+          variant={mode === "register" ? "primary" : "outline"}
+          onClick={() => setMode("register")}
+        >
+          Regjistrohu
+        </Button>
+
+        <h1>
+          {mode === "login" ? "Mirë se vini" : `Krijo llogari si ${roleName}`}
+        </h1>
+
+        <div>
+          <UserRound />
+          <p>{role === "customer" ? "Klient" : "Ofrues shërbimi"}</p>
+        </div>
+
         {/* Default for both modes */}
         <Input
           label="Numri i telefonit"
