@@ -1,0 +1,149 @@
+/* components/layout/PageBackground/PageBackground.css */
+.page-background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bottom-wave {
+  position: absolute;
+  left: -100px;
+  bottom: 0%;
+  max-width: none;
+  width: 190%;
+  height: auto;
+  z-index: 0;
+  opacity: 0.13;
+  pointer-events: none;
+  user-select: none;
+}
+
+.bottom-wave-2 {
+  position: absolute;
+  left: -80px;
+  bottom: 0%;
+  max-width: none;
+  width: 170%;
+  height: auto;
+  z-index: 0;
+  opacity: 0.15;
+  pointer-events: none;
+  user-select: none;
+}
+
+.background-decoration {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+  user-select: none;
+  opacity: 0.15;
+}
+
+.wrench-decoration {
+  width: 60px;
+  top: 4%;
+  left: 16%;
+}
+
+.house-decoration {
+  width: 80px;
+  top: 25%;
+  right: -6%;
+  rotate: 22deg;
+}
+
+.blob-1-decoration {
+  width: 250px;
+  top: 0%;
+  right: -28%;
+}
+
+.blob-2-decoration {
+  width: 300px;
+  top: 8%;
+  left: -42%;
+}
+
+/* ============================
+   TABLET — md (768px+)
+   ============================ */
+@media (min-width: 768px) {
+  .wrench-decoration {
+    width: 90px;
+    top: 52%;
+    left: 2%;
+  }
+
+  .house-decoration {
+    width: 100px;
+    top: 62%;
+    right: -4%;
+  }
+
+  .blob-1-decoration {
+    width: 420px;
+    top: -5%;
+    right: -24%;
+  }
+
+  .blob-2-decoration {
+    width: 500px;
+    top: 0%;
+    left: -34%;
+  }
+
+  .bottom-wave {
+    width: 120%;
+    left: -5px;
+    bottom: -8%;
+  }
+
+  .bottom-wave-2 {
+    width: 100%;
+    left: 0;
+    bottom: -5%;
+  }
+}
+
+/* ============================
+   DESKTOP — lg (1024px+)
+   ============================ */
+@media (min-width: 1024px) {
+  .wrench-decoration {
+    width: 160px;
+    top: 22%;
+    left: 16%;
+  }
+
+  .house-decoration {
+    width: 140px;
+    top: 18%;
+    right: 20%;
+  }
+
+  .blob-1-decoration {
+    width: 720px;
+    top: -10%;
+    right: -18%;
+  }
+
+  .blob-2-decoration {
+    width: 920px;
+    top: -2%;
+    left: -28%;
+  }
+
+  .bottom-wave {
+    width: 100%;
+    left: 0;
+    bottom: -20%;
+  }
+
+  .bottom-wave-2 {
+    width: 100%;
+    left: 0;
+    bottom: -8%;
+  }
+}
