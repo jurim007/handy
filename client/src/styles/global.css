@@ -25,7 +25,7 @@ body,
 body {
   font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
   color: var(--color-dark);
-  background-color: var(--color-background);
+  background-color: #fdf8f3;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
