@@ -18,7 +18,7 @@ function Dropdown({
         {Icon && (
           <Icon
             size={18}
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+            className="absolute left-3 top-1/2 -translate-y-1/2 text-black"
           />
         )}
         <select

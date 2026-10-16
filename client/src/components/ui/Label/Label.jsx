@@ -3,10 +3,10 @@ import "./Label.css";
 
 function Label({ children, htmlFor }) {
   return (
-    <label htmlFor={htmlFor} className="text-sm font-medium text-gray-600">
+    <label htmlFor={htmlFor} className="text-md font-semibold text-black">
       {children}
     </label>
   );
 }
 
-export default Label
+export default Label;
