@@ -76,9 +76,9 @@ const AuthPage = ({ role }) => {
     <div className="auth-page flex flex-col items-center justify-center">
       <PageBackground />
 
-      <div className="relative z-10 w-full max-w-lg px-4 py-6 flex flex-col items-center gap-3">
+      <div className="relative z-10 w-full md:max-w-xl lg:max-w-2xl px-4 py-6 flex flex-col items-center gap-3">
         <img
-          className="h-28 md:h-35 lg:h-60 mt-4"
+          className="h-28 md:h-35 lg:h-50"
           src={HandyLogo}
           alt="Handy Logo"
         />
