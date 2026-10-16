@@ -1,0 +1,17 @@
+/* features/auth/pages/AuthPage/AuthPage.css */
+
+/* ============================
+   BASE / MOBILE (default)
+   ============================ */
+
+.auth-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: rgb(244, 244, 244);
+}
+
+.form-content {
+  position: relative;
+  z-index: 2;
+}
