@@ -13,6 +13,7 @@ import Dropdown from "../../../../components/ui/Input/Dropdown";
 import WorkdaysPicker from "../../../../components/ui/WorkdaysPicker/WorkdaysPicker";
 
 import { HOURS } from "../../../../constants/hours";
+import { CATEGORIES } from "../../../../constants/categories";
 
 import {
   Phone,
@@ -169,7 +170,7 @@ const AuthPage = ({ role }) => {
                   <Dropdown
                     label="Kategoria"
                     icon={ListSortDescending}
-                    options={["Hidraulik", "Elektrik", "Pastrim", "Ndërtim"]}
+                    options={CATEGORIES}
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
                     placeholder="Zgjidh kategorinë"
