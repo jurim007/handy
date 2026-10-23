@@ -170,7 +170,7 @@ const AuthPage = ({ role }) => {
                   <Dropdown
                     label="Kategoria"
                     icon={ListSortDescending}
-                    options={CATEGORIES}
+                    options={CATEGORIES.map((c) => c.name)}
                     value={category}
                     onChange={(e) => setCategory(e.target.value)}
                     placeholder="Zgjidh kategorinë"
