@@ -4,6 +4,7 @@ import "./AuthPage.css";
 import HandyLogo from "../../../../assets/logo/handy-logo.png";
 
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import PageBackground from "../../../../components/layout/PageBackground/PageBackground";
 import Button from "../../../../components/ui/Button/Button";
@@ -39,6 +40,8 @@ const AuthPage = ({ role }) => {
   const [endTime, setEndTime] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const roleName = role === "customer" ? "klient" : "ofrues";
 
   const handleSubmit = (e) => {
@@ -71,6 +74,10 @@ const AuthPage = ({ role }) => {
 
     // 3. for now, just look at it
     console.log(data);
+
+    if (role === "customer") {
+      navigate("/customer/dashboard");
+    }
   };
 
   return (
