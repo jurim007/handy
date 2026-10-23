@@ -2,6 +2,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import RoleSelect from "../features/auth/pages/RoleSelect/RoleSelect";
 import AuthPage from "../features/auth/pages/AuthPage/AuthPage";
+import CustomerDashboard from "../features/customer/pages/Dashboard/Dashboard";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/provider/login",
     element: <AuthPage role="provider" />,
+  },
+  {
+    path: "/customer/dashboard",
+    element: <CustomerDashboard />,
   },
 ]);
 
