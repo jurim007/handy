@@ -1,8 +1,13 @@
 // features/customer/pages/Dashboard/Dashboard.jsx
 import "./Dashboard.css";
+import PageBackground from "../../../../components/layout/PageBackground/PageBackground";
 
 const Dashboard = () => {
-  return <div>Dashboard</div>;
+  return (
+    <div>
+      <PageBackground />
+    </div>
+  );
 };
 
 export default Dashboard;
