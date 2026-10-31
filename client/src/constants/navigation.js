@@ -19,5 +19,6 @@ export const CUSTOMER_NAV = [
     label: "Profili",
     shortLabel: "Profili",
     icon: User,
+    mobileOnly: true,
   },
 ];
