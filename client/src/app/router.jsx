@@ -1,6 +1,7 @@
 // app/router.jsx
 import { createBrowserRouter } from "react-router-dom";
 import AppLayout from "../components/layout/AppLayout/AppLayout";
+import { CUSTOMER_NAV } from "../constants/navigation";
 
 import RoleSelect from "../features/auth/pages/RoleSelect/RoleSelect";
 import AuthPage from "../features/auth/pages/AuthPage/AuthPage";
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
 
   {
     path: "/customer",
-    element: <AppLayout />,
+    element: <AppLayout navItems={CUSTOMER_NAV} />,
     children: [
       { path: "dashboard", element: <CustomerDashboard /> },
       { path: "requests", element: <Requests /> },
