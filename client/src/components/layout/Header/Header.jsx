@@ -11,12 +11,12 @@ const Header = ({ navItems }) => {
 
   return (
     <div>
-      <header className="relative z-30 w-full p-8">
-        <div className="flex items-center justify-between bg-white h-25 rounded-2xl">
+      <header className="relative z-30 w-full py-10 px-15">
+        <div className="flex items-center justify-center md:justify-between md:bg-white md:h-25 md:rounded-2xl">
           <Link to="/customer/dashboard">
             <img className="h-20 md:hidden" src={HandyLogo} alt="Full Logo" />
 
-            <div className="flex items-center gap-1 ml-4">
+            <div className="flex items-center gap-1 ml-6">
               <img
                 className="h-13 hidden md:block"
                 src={HandyIcon}
@@ -30,24 +30,36 @@ const Header = ({ navItems }) => {
             </div>
           </Link>
 
-          <nav className="hidden md:flex gap-2">
-            {topNavItems.map(({ to, label, icon: Icon }) => (
-              <NavLink
-                key={to}
-                to={to}
-                className={({ isActive }) =>
-                  `flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-colors ${
-                    isActive
-                      ? "bg-orange-400/15 text-orange-400"
-                      : "text-(--color-muted) hover:text-(--color-dark)"
-                  }`
-                }
-              >
-                <Icon size={20} />
-                {label}
-              </NavLink>
-            ))}
-          </nav>
+          <div className="hidden md:flex items-center gap-4 mr-6">
+            <nav className="flex gap-2">
+              {topNavItems.map(({ to, label, icon: Icon }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  className={({ isActive }) =>
+                    `flex items-center gap-2 px-4 py-2 rounded-xl font-medium transition-colors ${
+                      isActive
+                        ? "bg-orange-400/15 text-orange-400"
+                        : "text-(--color-muted) hover:text-(--color-dark)"
+                    }`
+                  }
+                >
+                  <Icon size={20} />
+                  {label}
+                </NavLink>
+              ))}
+            </nav>
+
+            <div className="h-8 w-px bg-gray-200" aria-hidden="true" />
+
+            <button
+              type="button"
+              aria-label="Profili"
+              className="flex h-10 w-10 shrink-0 items-center justify-center  rounded-full bg-orange-400/15 text-sm font-semibold text-orange-400"
+            >
+              AK
+            </button>
+          </div>
         </div>
       </header>
     </div>
