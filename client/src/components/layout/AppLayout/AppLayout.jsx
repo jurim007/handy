@@ -10,7 +10,7 @@ const AppLayout = ({ navItems }) => {
     <div className="relative min-h-screen">
       <PageBackground />
       <Header navItems={navItems} />
-      <main className="relative z-10">
+      <main className="relative z-10 pb-20 md:pb-0">
         <Outlet />
       </main>
       <BottomNav navItems={navItems} />
