@@ -40,7 +40,7 @@ export const PROVIDERS = [
   {
     id: 4,
     name: "Besnik Hoxha",
-    category: "ndërtim",
+    category: "ndertim",
     city: "Shkodër",
     price: 900,
     rating: 4.6,
@@ -84,7 +84,7 @@ export const PROVIDERS = [
   {
     id: 8,
     name: "Ardit Shehu",
-    category: "të-tjera",
+    category: "te-tjera",
     city: "Elbasan",
     price: 500,
     rating: 4.4,
