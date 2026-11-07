@@ -57,7 +57,7 @@ const Header = ({ navItems }) => {
               aria-label="Profili"
               className="flex h-10 w-10 shrink-0 items-center justify-center  rounded-full bg-orange-400/15 text-sm font-semibold text-orange-400"
             >
-              AK
+              JM
             </button>
           </div>
         </div>
