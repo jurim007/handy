@@ -1,43 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
+    font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
 
-  --color-primary: #ff6a2b;
-  --color-dark: #1e2a38;
-  --color-background: #ffffff;
-  --color-border: #e6e9ed;
-  --color-muted: #6b7280;
+    --color-primary: #ff6a2b;
+    --color-dark: #1e2a38;
+    --color-background: #ffffff;
+    --color-border: #e6e9ed;
+    --color-muted: #6b7280;
 }
 
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html,
 body,
 #root {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
 }
 
 body {
-  font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
-  color: var(--color-dark);
-  background-color: #fdf8f3;
+    font-family: "DM Sans", "Segoe UI", Arial, sans-serif;
+    color: var(--color-dark);
+    background-color: #fdf8f3;
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-button,
-input,
-select,
-textarea {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
+@layer base {
+    button {
+        cursor: pointer;
+    }
 }
