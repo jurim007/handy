@@ -11,6 +11,10 @@ function Dropdown({
                       placeholder = "Zgjidh",
                       required,
                   }) {
+    const items = options.map((o) =>
+        typeof o === "string" ? {value: o, label: o} : o
+    );
+
     return (
         <div>
             {label && <Label>{label}</Label>}
@@ -30,9 +34,9 @@ function Dropdown({
                     }`}
                 >
                     <option value="">{placeholder}</option>
-                    {options.map((option) => (
-                        <option key={option} value={option}>
-                            {option}
+                    {items.map((item) => (
+                        <option key={item.value} value={item.value}>
+                            {item.label}
                         </option>
                     ))}
                 </select>
