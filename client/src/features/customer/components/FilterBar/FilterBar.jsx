@@ -1,8 +1,8 @@
 // features/customer/components/FilterBar/FilterBar.jsx
-import {CATEGORIES} from "../../../../constants/categories.js";
-import Button from "../../../../components/ui/Button/Button.jsx";
-import Dropdown from "../../../../components/ui/Dropdown/Dropdown.jsx";
-import {CalendarDays, CircleEuro, ListSortDescending, MapPin} from "lucide-react";
+import {CATEGORIES} from '../../../../constants/categories.js';
+import Button from '../../../../components/ui/Button/Button.jsx';
+import Dropdown from '../../../../components/ui/Dropdown/Dropdown.jsx';
+import {CalendarDays, CircleEuro, ListSortDescending, MapPin} from 'lucide-react';
 
 const FilterBar = ({
                        selectedCategory,
@@ -15,9 +15,8 @@ const FilterBar = ({
                        onZoneChange,
                        onClear,
                    }) => {
-
     return (
-        <div className="grid grid-cols-1 gap-3 md:grid-cols-5">
+        <div className="bg-white rounded-2xl p-4 my-4 grid grid-cols-1 gap-3 md:grid-cols-5">
             <Dropdown
                 icon={ListSortDescending}
                 options={CATEGORIES.map((c) => ({value: c.id, label: c.name}))}
@@ -29,9 +28,8 @@ const FilterBar = ({
             <Dropdown
                 icon={CircleEuro}
                 options={[
-                    {value: "", label: "Pa renditje"},
-                    {value: "asc", label: "Çmimi: nga më i ulëti"},
-                    {value: "dsc", label: "Çmimi: nga më i larti"}
+                    {value: 'asc', label: 'Çmimi: nga më i ulëti'},
+                    {value: 'dsc', label: 'Çmimi: nga më i larti'},
                 ]}
                 value={sortOrder}
                 onChange={(e) => onSortChange(e.target.value)}
@@ -41,10 +39,9 @@ const FilterBar = ({
             <Dropdown
                 icon={MapPin}
                 options={[
-                    {value: "", label: "Të gjitha zonat"},
-                    {value: "Tiranë", label: "Tiranë"},
-                    {value: "Durrës", label: "Durrës"},
-                    {value: "Shkodër", label: "Shkodër"}
+                    {value: 'Tiranë', label: 'Tiranë'},
+                    {value: 'Durrës', label: 'Durrës'},
+                    {value: 'Shkodër', label: 'Shkodër'},
                 ]}
                 value={zone}
                 onChange={(e) => onZoneChange(e.target.value)}
@@ -54,23 +51,22 @@ const FilterBar = ({
             <Dropdown
                 icon={CalendarDays}
                 options={[
-                    {value: "", label: "Të gjitha ditët"},
-                    {value: "Hën", label: "Hën"},
-                    {value: "Mar", label: "Mar"},
-                    {value: "Mër", label: "Mër"},
-                    {value: "Enj", label: "Enj"},
-                    {value: "Pre", label: "Pre"},
-                    {value: "Sht", label: "Sht"},
-                    {value: "Die", label: "Die"}
+                    {value: 'Hën', label: 'Hën'},
+                    {value: 'Mar', label: 'Mar'},
+                    {value: 'Mër', label: 'Mër'},
+                    {value: 'Enj', label: 'Enj'},
+                    {value: 'Pre', label: 'Pre'},
+                    {value: 'Sht', label: 'Sht'},
+                    {value: 'Die', label: 'Die'},
                 ]}
                 value={day}
                 onChange={(e) => onDayChange(e.target.value)}
-                placeholder="Të gjitha zonat"
+                placeholder="Të gjitha ditët"
             />
 
             <Button onClick={onClear}>Pastro filtrat</Button>
         </div>
-    )
-}
+    );
+};
 
-export default FilterBar
+export default FilterBar;
